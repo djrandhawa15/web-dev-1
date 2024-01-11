@@ -162,13 +162,22 @@
 
 		<section>
 			<h2>Audio & Video</h2>
-			<audio src="media/dialup-internet.mp3">
+			<audio controls>
+				<source src="media/dialup-internet.mp3">
 				Your browser does not support the audio element.
 			</audio>
-			<audio src="media/dialup-internet.mp3" controls></audio>
-			<video src="media/storm.mp4">
-				Storm video
+			<video controls width="720" poster="images/storm.jpg">
+				<source src="media/storm.mp4" type="video/mp4">
+				<source src="media/storm.webm" type="video/webm">
+				Your browser does not support the video element.
 			</video>
+			<!-- Playsinline is required to enable autoplay on ios -->
+			<video autoplay muted loop playsinline>
+				<source src="media/storm.mp4" type="video/mp4">
+				<source src="media/storm.webm" type="video/webm">
+				Your browser does not support the video element.
+			</video>
+			
 		</section>
 	</main>
 
