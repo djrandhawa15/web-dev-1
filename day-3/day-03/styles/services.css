@@ -7,6 +7,7 @@ body{
 
 header{
     background-color: lightgray;
+    padding: 0.5rem 0;
     p{text-align: center;}
     li{
         text-align: center;
@@ -27,12 +28,13 @@ h1{
 h2{
     text-align: left;
 }
+
 .service p{
     text-align: left;
 }
 
 .service article{
-    background-color: green;
+    background-color: lightgreen;
     padding: 1rem 2.5rem;
     margin-bottom: 1rem;
 }
