@@ -1,4 +1,6 @@
 body {
+	max-width: 31.25rem; /* Makes our page mobile size only */
+	margin: 0 auto;
 	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -8,6 +10,10 @@ body {
 
 h2 {
 	color: darkred;
+}
+
+nav li{
+	display: inline-block;
 }
 
 .warning {
@@ -27,6 +33,9 @@ section.warning {
 	background-color: #ffff0075;
 }
 
+section.warning img {
+	display: block;
+}
 .table-custom {
 	color: green;
 }
@@ -34,3 +43,9 @@ section.warning {
 table {
 	color: orange;
 }
+
+.section-table {
+	background-color: greenyellow;
+	padding: 1rem 2rem 3rem 4rem;
+}
+
