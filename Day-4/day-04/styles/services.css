@@ -91,6 +91,7 @@ main{
 /* Services Styles */
 .cards{
 	display: flex;
+	flex-direction: column;
 }
 
 .services article {
@@ -124,8 +125,11 @@ main{
 
 @media (min-width: 50em){
 	.cards {
-		flex-direction: column;
-		flex-direction: column-reverse;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		/* flex-direction: column-reverse; */
 	}
 	.services article{
 		background-color: #caefff;
@@ -134,7 +138,16 @@ main{
 	.services a{
 		background-color: #346270;
 	}
-	
+	.cards article{
+		/* width: 40%; */
+		flex: 0 1 30%;
+
+	}	
+
+	.cards .service-1{
+		flex: 0 1 50%;
+		order: 1;
+	}
 }
 /* Testimonials Styles */
 .testimonials img {
@@ -151,4 +164,14 @@ main{
 .testimonials blockquote p {
 	display: inline-block;
 	margin: 0;
+}
+
+@media (min-width: 50em){
+	.testimonials{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.testimonials > *:not(article){
+		width: 100%;
+	}
 }
