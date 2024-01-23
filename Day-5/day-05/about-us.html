@@ -5,6 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>About Us</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="styles/normalize-fwd.css">
 	<link rel="stylesheet" href="styles/about.css">
 </head>
@@ -51,7 +54,42 @@
 			<p>You can <a href="media/resume.pdf">download our resume</a> to learn more.</p>
 
 			<!-- Code along during the lecture to start building your form -->
+			<form action="#" method="post">
+				<h2>Apply Now</h2>
+				<fieldset>
+					<legend>
+						<span class="number">1</span>
+						Your basic info
+					</legend>
+					<label for="name">Name:</label>
+					<input type="text" name="user-name" id="name">
+					<label for="mail">Email:</label>
+					<input type="email" name="user-email" id="mail">
 
+					<label for="password">Password:</label>
+					<input type="password" name="user-password" id="password">
+
+					<label for="comments">Comments:</label>
+					<textarea name="comments" id="comments"></textarea>
+				</fieldset>
+				<fieldset>
+					<legend>
+						<span class="number">2</span>
+						Work Details
+					</legend>
+					<label>Preferred Work setup</label>
+
+
+					<input type="radio" name="work-setup" id="hybrid" value="hybrid">
+					<label for="hybrid" class="light">Hybrid</label>
+
+					<input type="radio" name="work-setup" id="remote" value="remote">
+					<label for="remote" class="light">Remote</label>
+
+					
+				</fieldset>
+				<input type="submit" value="Submit">
+			</form>
 		</main>
 
 		<footer>
