@@ -260,16 +260,29 @@ article {
 	margin-bottom: 1.5rem;
 }
 
+article::after {
+	content: '';
+	display: block;
+	/* clear: both;  unnessisary due to clear fix*/
+}
 article footer {
 	margin: 1rem 0 0;
 }
 
 .alignleft {
-	
+	float: left;
+	margin: 0 1rem 1rem 0;
 }
 
 .alignright {
-	
+	float: right;
+	margin: 0 0 1rem 1rem;
+}
+
+.external-link::after{
+	content: url(../images/icon-external-link.png);
+	margin-left: 0.25rem;
+	vertical-align: middle;
 }
 
 
