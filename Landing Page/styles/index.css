@@ -1,0 +1,329 @@
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+.site-wrapper {
+	/* This is for very large screens */
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	height: 4.5rem;
+}
+
+.site-logo {
+    margin: 1rem 0;
+}
+
+.site-header img {
+    display: block;
+	width: 5rem;
+    height: 5rem;
+}
+
+
+.site-navigation ul {
+	list-style: none;
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 4.5rem;  /* Matches the height of the .site-header */
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+
+.site-navigation.toggled ul {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.nav-menu li {
+	list-style: none;
+	background-color: rgb(216, 237, 244);
+	line-height: 3rem;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+}
+
+.nav-menu a {
+	text-decoration: none;
+	color: black;
+	font-weight: normal;
+	font-size: 1.2rem;
+	line-height: 0;
+}
+
+.nav-menu a:hover {
+    color: black;
+}
+
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+	margin: 1rem;
+	fill: black;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+/* 
+.page-header {
+	position: relative;
+}
+
+.page-header img {
+	display: block;
+	object-fit: cover;
+}
+.site-name {
+	color:black;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: 2rem;
+	align-items: left;
+}
+
+.site-navigation {
+	padding: 0 1rem;
+}
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	float: right;
+}
+
+/* Typeography*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: black;
+	background-color: rgb(216, 237, 244);
+}
+h1 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	margin: .5em 0;
+	font-size: 1.75rem;
+	text-align: center;
+} 
+/*links*/
+a,
+a:visited { 
+	text-decoration: none;
+	font-size: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	
+}
+/* START -- STYLES FOR MOBILE MENU */
+/* we will cover this more later */
+.site-navigation ul {
+	display: none;
+	position:absolute;
+	top: 4.5rem;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	
+}
+.nav-menu li a{
+	color: black;
+}
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+
+
+/* END -- STYLES FOR MOBILE MENU */
+
+/* Main
+--------------------------------------------- */
+/* Page Header */
+.page-header {
+	position: relative;
+}
+
+.page-header h1 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+	margin: 0;
+	font-size: 3rem;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.page-header img {
+	display: block;
+	object-fit: cover;
+	
+}
+
+@media (min-width: 50em) {
+
+	.page-header img{
+		min-height:25rem;
+	}
+
+	.menu-toggle{
+		margin: 1rem;
+		background-color: #ffff;
+		border: none;
+	}
+	.about-me p{
+		width: 37.5rem;
+		align-items: center;
+	}
+
+	.section-projects {
+        flex-direction: row;
+		
+    }
+
+}
+/*About*/
+
+.about-me{
+	text-align: center;
+}
+.about-me h2{
+	font-size: 2rem;
+	text-align: center;
+}
+.about-me p{
+	margin:0 auto;
+	text-align: left;
+	padding-bottom: 1.25rem;
+	font-size: 1.25rem;
+	/*padding: 2rem 2rem;
+	margin-right: 2rem;
+	margin-bottom: 3rem; */
+}
+
+
+/*Projects*/
+.projects{
+	box-shadow: 0 0 3px 2px lightslategray;
+	background-color: lightcyan;
+	margin: 1rem 0;
+}
+.project-text{
+	margin: 0 1rem;
+	padding: 1rem;
+	text-align: center;
+}
+.section-projects{
+	align-content: center;
+}
+
+.projects-wrapper,
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.projects-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+@media (min-width: 43.75em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-navigation {
+		padding: 0 1rem;
+		/* add flex styles here */
+		 
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		/* add flex styles here */
+		display: flex;
+		flex-direction: row;
+		/* START - Remove Mobile Menu Styles */
+		position: relative;
+		top: 0;
+		/* END - Remove Mobile Menu Styles  */
+	}
+
+	.site-navigation a {
+		line-height: 4.5rem; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
+		padding: 0 1rem;
+	}
+	.section-projects{
+		flex-direction: row;
+	}
+
+}
+
+/* Footer */
+.site-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: lightgrey;
+	text-align: center;
+	padding: 1rem;
+}
+.site-footer a.back-to-top {
+	color: black;
+	margin-top: .5rem;
+	text-decoration: none;
+}
+a.material-symbols-outlined {
+	font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 24;
+	text-decoration: none;
+	color: black;
+}
